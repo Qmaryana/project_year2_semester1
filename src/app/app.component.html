@@ -1,0 +1,16 @@
+<ul>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a routerLink="/">Home</a>
+  </li>
+  <li routerLinkActive="active">
+    <a routerLink="/women">Women</a>
+  </li>
+  <li routerLinkActive="active">
+    <a routerLink="/men">Men</a>
+  </li>
+  <li>
+   🛍️
+    <span>{{ serviesService.cart.length }}</span> <!--משתנה של הסרביס-->
+  </li>
+</ul>
+<router-outlet></router-outlet> 

@@ -1,0 +1,19 @@
+<div *ngFor="let clothes of clothesWomen" class="product-card"> <!-- מערך של הבגדים שלנו -->
+  <div class="product-details"> 
+    <h2>Price: {{ clothes.price }} ₪</h2> <!-- מדפיסים משתנה -->
+    <h3>Sizes: {{ clothes.size.join(', ') }}</h3> <!-- מדפיסים משתנה ומשתמשים בפונקציה שמחברת לנו את השרשור-->
+    <p *ngIf="clothes.inStock; else outOfStock" class="in-stock">In Stock</p> <!-- תנאי שהגדרנו שאם זה מתבצע אז יראה עיצוב נכון לתנאי -->
+    <ng-template #outOfStock> <!-- אם התנאי לא נכון ילך לאחרת והעיצוב יהיה אחר וגם יציג מילה שונה-->
+      <p class="out-of-stock">Out of Stock</p>
+    </ng-template>
+    <hr> <!--פס מוגדר-->
+    <button (click)="addToCart(clothes)" [disabled]="isOutOfStock(clothes)" [style.cursor]="isOutOfStock(clothes) ? 'not-allowed' : 'pointer'">
+      Add To Cart
+    </button>
+     <!-- כפתור שמקושר לפונקציה מהסרביס אם הפריט לא זמין אז הכפתור לא יוסיף לסל-->
+      <!-- לא יוסיף לסל בזכות הדיסייבל-->
+       <!-- (property binding)הוספנו עיצוב רק לחץ של העכבר כאשר הפריט לא זמין אי אפשר ללחוץ-->
+       <!--If the item is out of stock the cursor will be set to 'not-allowed', making it visually clear that the button is disabled. If the item is in stock, the cursor will be set to 'pointer'-->
+  </div>
+  <img [src]="clothes.imageUrl" alt="Product Image" class="product-image">
+</div>

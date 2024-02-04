@@ -1,0 +1,19 @@
+.divText {
+  color: #2D3250;
+  text-align: center;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.divPic {
+  display: flex;
+  /* מסדר את הדף לפי הגודל חלונית*/
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}

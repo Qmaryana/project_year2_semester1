@@ -1,0 +1,42 @@
+.product-card {
+  display: flex;
+  /* מסדר את הדף לפי הגודל חלונית*/
+  justify-content: space-between;
+  /*רווח בין התמונה לכיתוב*/
+  border: 1px solid #2D3250;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  /*Margins are the space outside an element*/
+  color: #2D3250;
+}
+
+.product-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 5px;
+}
+
+.in-stock {
+  color: green;
+}
+
+.out-of-stock {
+  color: red;
+}
+
+button {
+  padding: 10px 10px;
+  /*Padding is the space inside an element*/
+  font-size: 15px;
+  background-color: #2a73ab;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #144062;
+}
