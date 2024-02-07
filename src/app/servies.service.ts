@@ -7,10 +7,10 @@ export class ServiesService {
 
   constructor() { }
 
-  cart: any[] = []; //משתנה בשם cart הגדרנו שהוא מערך
+  ItemCount: number = 0;
 
   addToCart(item: any) {
-    // Add item to the cart
-    this.cart.push(item); //דוחפת את הבגד לסל קניות
+    // Increment the count when an item is added to the cart
+    this.ItemCount++;
   }
 }
